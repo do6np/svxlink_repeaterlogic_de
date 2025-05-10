@@ -1,6 +1,7 @@
 ###############################################################################
 #
 # Generic Logic event handlers for German language pack by DO6NP
+# Tested with V1.9@25.05 - Last changed: 10-05-2025
 #
 ###############################################################################
 
@@ -99,7 +100,7 @@ proc send_short_ident {{hour -1} {minute -1}} {
     # Play CW id if enabled
     if {$short_cw_id_enable} {
       puts "Playing short CW ID first"
-      if [playMsg "LocalAudio" "$mycall_cw" 0] {
+      if [playMsg "LocalAudio" "{$mycall}_cw" 0] {
       } else {
         CW::play $mycall
       }
@@ -119,7 +120,7 @@ proc send_short_ident {{hour -1} {minute -1}} {
     if {$short_cw_id_enable} {
       puts "Playing short CW ID first"
       playSilence 50;
-      if [playMsg "LocalAudio" "$mycall_cw" 0] {
+      if [playMsg "LocalAudio" "{$mycall}_cw" 0] {
       } else {
         CW::play $mycall
       }
@@ -158,7 +159,7 @@ proc send_long_ident {hour minute} {
   if {$cw_first} {
     if {$long_cw_id_enable} {
       puts "Playing long CW ID first"
-      if [playMsg "LocalAudio" "$mycall_cw" 0] {
+      if [playMsg "LocalAudio" "{$mycall}_cw" 0] {
       } else {
         CW::play $mycall
       }
@@ -179,7 +180,7 @@ proc send_long_ident {hour minute} {
     if {$long_cw_id_enable} {
       puts "Playing long CW ID second"
       playSilence 50;
-      if [playMsg "LocalAudio" "$mycall_cw" 0] {
+      if [playMsg "LocalAudio" "{$mycall}_cw" 0] {
       } else {
         CW::play $mycall
       }

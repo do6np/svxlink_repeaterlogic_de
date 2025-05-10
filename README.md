@@ -29,27 +29,27 @@ Ferner garantiere ich natürlich für absolut gar nichts! Einsatz der hier angeb
 1. Falls noch nicht vorhanden, git installieren (wenn SvxLink installiert ist, sollte dieses bereits vorhanden sein):
 
 ```
-$ apt-get update && apt-get upgrade
-$ apt-get install git
+apt-get update && apt-get upgrade
+apt-get install git
 ```
 
 2. Aktuelle Version dieses Pakets aus dem git laden:
 
 ```
-$ git clone https://github.com/do6np/svxlink_repeaterlogic_de.git
+git clone https://github.com/do6np/svxlink_repeaterlogic_de.git
 ```
 
 3. Verzeichnis wechseln und Installations-Skript ausführbar machen:
 
 ```
-$ cd svxlink_repeaterlogic_de
-$ chmod +x install.sh
+cd svxlink_repeaterlogic_de
+chmod +x install.sh
 ```
 
 4. Skript starten:
 
 ```
-$ ./install.sh
+./install.sh
 ```
 
 5. Parameter anpassen, siehe folgende Kapitel.
@@ -61,7 +61,7 @@ $ ./install.sh
 Nach der Installation des Pakets werden alle Einstellungen zum Relais in der Datei /etc/svxlink/svxlink.d/repeater.conf bzw. /usr/local/etc/svxlink/svxlink.d/repeater.conf (je nach Installation) vorgenommen. Eine Bearbeitung ist z.B. mit diesem Kommando möglich:
 
 ```
-$ sudo nano /etc/svxlink/svxlink.d/repeater.conf
+sudo nano /etc/svxlink/svxlink.d/repeater.conf
 ```
 
 ### Parameter
@@ -106,10 +106,10 @@ Variante zwei ist dann interessant, wenn das Relais mehrere Empfänger besitzt u
 
 ### Ort der Dateiablage
 
-Unter /usr/share/svxlink/sounds/LANG liegen die Sprachdateien der SvxLink-Installation, wobei LANG durch die jeweilige Sprache zu ersetzen ist (z.B. /usr/share/svxlink/sounds/de_DE). Dort muss ein Ordner Namens "LocalAudio" (Schreibweise beachten) angelegt werden. Dies geht z.B. mit folgendem Befehl:
+Unter /usr/share/svxlink/sounds/LANG liegen die Sprachdateien der SvxLink-Installation, wobei LANG durch die jeweilige Sprache zu ersetzen ist (z.B. /usr/share/svxlink/sounds/de_DE). Dort muss ein Ordner Namens "LocalAudio" (Schreibweise beachten!) angelegt werden. Dies geht z.B. mit folgendem Befehl:
 
 ```
-$ sudo mkdir /usr/share/svxlink/sounds/de_DE/LocalAudio
+sudo mkdir /usr/share/svxlink/sounds/de_DE/LocalAudio
 ```
 
 Anschließend können alle gewünschten Dateien dort hineinkopiert werden.

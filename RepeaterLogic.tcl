@@ -1,6 +1,7 @@
 ###############################################################################
 #
 # RepeaterLogic event handlers for German language pack by DO6NP
+# Tested with V1.9@25.05 - Last changed: 10-05-2025
 #
 ###############################################################################
 
@@ -46,7 +47,7 @@ proc repeater_up {reason} {
     } else {
       set Logic::prev_ident $now;
       Logic::send_short_ident;
-      if {($reason )= "CTCSS_CLOSE") || ($reason )= "CTCSS_OPEN")} {
+      if {($reason == "CTCSS_CLOSE") || ($reason == "CTCSS_OPEN")} {
         return;
       } else {
         if {$report_ctcss > 0} {
@@ -117,6 +118,7 @@ proc checkPeriodicIdentify {} {
 # This is probably someone who opens the repeater but do not identify.
 #
 proc identify_nag {} {
+  playSilence 50;
   playMsg "Core" "please_identify";
   playSilence 50;
 }
